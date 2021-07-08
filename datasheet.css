@@ -1,0 +1,89 @@
+body{
+    background-image: url(img/backGround.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+h1{
+    text-align: center;
+    color: whitesmoke;
+    text-decoration: none;
+}
+
+h2{
+    font-size: 30px;
+    text-align: center;
+    color: #ffffff;
+}
+
+.links {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+#boardGame{
+    margin-top: 60px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    width: 600px;
+    height: 600px;
+    color: #ffffff;
+}
+
+#score {
+    margin-top: 5px;
+    letter-spacing: 2px;
+}
+
+/*------STATE OF CARDS------*/
+
+
+.space{
+    display: inline-block;
+    margin: 5px;
+}
+
+.card, .coverCard{
+
+    width: 125px;
+	height: 125px;
+    background-size: cover;
+    display: block;
+    border: 2px solid black;
+	border-radius: 2px;
+    
+    cursor: pointer;
+ 
+	filter: brightness(70%);
+    transition: all .5s ease-in-out;
+    position: relative;
+}
+
+.card{
+    opacity: 0;
+}
+
+.coverCard{
+    background-image: url("img/cover.jpg");
+}
+
+.card:hover, .coverCard:hover{
+    filter: brightness(100%);
+    border-color: gold;
+}
+
+.card.reveal{
+    opacity: 1;
+    filter: brightness(150%);
+    border-color: gold;
+    transition: opacity 0,5s ease-in-out;
+}
+
+.matched {
+    opacity: 0;
+    pointer-events: none;
+}
+
